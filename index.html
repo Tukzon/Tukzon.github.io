@@ -1,154 +1,75 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html prefix="og: http://ogp.me/ns#" lang="en" style="height: 100%">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <head>
-    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=5" />
-
-    <title> Gonzalo Salazar - Dev </title>
-    <meta name="description" content="portfolio Description">
-    <meta property="og:title" content="portfolio">
-    <meta property="og:description" content="portfolio Description">
-
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="assets/js/next.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Palanquin:700">
-      <link rel="stylesheet" href="./style.css">
-        
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Gonzalo Salazar - DEV</title>    
+</head>
+<body>
     <main>
-      <div class="outer_q4">
-        <img id="q4" data-name="Ellipse 1" src="assets/images/Ellipse_1.png" alt="Ellipse 1" class="q4">
-      </div>
-      <div class="outer_q5">
-        <div id="q5" data-name="Frame 4" class="q5">
-          <div class="outer_q6">
-            <div id="q6" data-name="Frame 6" class="q6">
-              <div class="outer_q7">
-                <div id="q7" data-name="Contacto" class="q7">
-                  <div key="0">Contacto</div>
-                </div>
+      <svg id="circle-left-top"></svg>
+      <svg id="circle-right-bot"></svg>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon iconify" data-icon="gg:menu"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto sombra-nav">
+                  <li class="nav-item">
+                    <a class="nav-link text-center ajuste-nav" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-center ajuste-nav" href="#">Acerca</a>
+                  </li>
+                  <a class="navbar-brand" href="#"><img class="img-fluid logo-nav text-center" src="./assets/images/logo.png"></a>
+                  <li class="nav-item">
+                    <a class="nav-link text-center ajuste-nav" href="#">Portafolio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-center ajuste-nav" href="#">Contacto</a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav" id="social">
+                    <li class="nav-item>">
+                        <a class="nav-link text-center" href="https://www.linkedin.com/in/gonzalo-salazar-mu%C3%B1oz/"><span class="iconify" data-icon="mdi:linkedin" data-width="30px"></span></a>
+                    </li>
+                    <li class="nav-item>">
+                        <a class="nav-link text-center" href="https://github.com/Tukzon"><span class="iconify" data-icon="mdi:github" data-width="30px"></span></a>
+                    </li>
+                    <li class="nav-item>">
+                        <a class="nav-link text-center" href="https://www.instagram.com/_gonza_s/"><span class="iconify" data-icon="mdi:instagram" data-width="30px"></span></a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        <div class="container-fluid contenido">
+            <div class="row justify-content-around" id="info">
+              <div class="col-4">
+                  <img class="img-fluid imagen" src="./assets/images/imagen_1.png">
+              </div>
+              <div class="col-4">
+                <h1 class="texto-bienvenida">Bienvenido a mi pagina!</h1>
+              </div>
+            </div>
+            <div class="row justify-content-between">
+              <div class="col-4 mx-auto boton">
+                <span class="iconify" data-icon="mdi:arrow-right-bold-outline" data-width="50px" onclick="next();"></span>
               </div>
             </div>
           </div>
-          <div class="outer_q8">
-                    <div id="q8" data-name="Frame 5" class="q8">
-                      <div class="outer_q9">
-                        <div id="q9" data-name="Portafolio" class="q9">
-                          <div key="0">Portafolio</div>
-                        </div>
-                      </div>
-                    </div>
-          </div>
-          <div class="outer_q10">
-                    <img id="q10" data-name="logo-nobody 1" src="assets/images/logo_nobody_1.png" alt="logo-nobody 1" class="q10">
-          </div>
-          <div class="outer_q11">
-                    <div id="q11" data-name="Frame 4" class="q11">
-                      <div class="outer_q12">
-                        <div id="q12" data-name="Acerca" class="q12">
-                          <div key="0">Acerca</div>
-                        </div>
-                      </div>
-                    </div>
-          </div>
-          <div class="outer_q13">
-                    <div id="q13" data-name="Frame 3" class="q13">
-                      <div class="outer_q14">
-                        <div id="q14" data-name="Inicio" class="q14">
-                          <div key="0">Inicio</div>
-                        </div>
-                      </div>
-                    </div>
-          </div>
-        </div>
-      </div>
-      <div class="outer_q15">
-        <div id="q15" data-name="Rectangle 1" alt="Rectangle 1" class="q15"></div>
-      </div>
-      <div class="outer_q16">
-        <div id="q16" data-name="Frame 7" class="q16">
-                  <div class="outer_q17">
-                    <div id="q17" data-name="akar-icons:instagram-fill" class="q17">
-                      <div class="outer_q18">
-                        <div id="q18" data-name="Group" class="q18">
-                          <div class="outer_q19">
-                            <a href="https://www.instagram.com/_gonza_s/">
-                              <img id="instagram" data-name="Vector" src="assets/images/Vector_1.png" alt="Vector" class="instagram">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="outer_q20">
-                    <div id="q20" data-name="akar-icons:github-fill" class="q20">
-                      <div class="outer_q21">
-                        <div id="q21" data-name="Group" class="q21">
-                          <div class="outer_q22">
-                            <a href="https://github.com/Tukzon">
-                              <img id="github" data-name="Vector" src="assets/images/Vector_2.png" alt="Vector" class="github">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="outer_q23">
-                    <div id="q23" data-name="logos:linkedin-icon" class="q23">
-                      <div class="outer_q24">
-                        <a href="https://www.linkedin.com/in/gonzalo-salazar-mu%C3%B1oz/">
-                          <img id="linkedin" data-name="Vector" src="assets/images/Vector_3.png" alt="Vector" class="linkedin">
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-      </div>
-      </div>
-      <div class="outer_q25">
-        <div id="q25" data-name="gg:menu-round" class="q25">
-          <div class="outer_q26">
-                    <div id="q26" data-name="Group" class="q26">
-                      <div class="outer_q27">
-                        <button class="boton">
-                          <img id="q27" data-name="Vector" src="assets/images/Vector_4.png" alt="Menu" class="q27">
-                        </button>
-                      </div>
-                      <div class="outer_q28">
-                        <img id="q28" data-name="Vector" src="assets/images/Vector_5.png" alt="Vector" class="q28">
-                      </div>
-                      <div class="outer_q29">
-                        <img id="q29" data-name="Vector" src="assets/images/Vector_6.png" alt="Vector" class="q29">
-                      </div>
-                      <div class="outer_q30">
-                        <img id="q30" data-name="Vector" src="assets/images/Vector_7.png" alt="Vector" class="q30">
-                      </div>
-                    </div>
-          </div>
-        </div>
-      </div>
-      <div class="outer_q31">
-        <img id="q31" data-name="imagen 1" src="assets/images/imagen_1.png" alt="imagen 1" class="q31">
-      </div>
-      <div class="outer_q32">
-        <img id="q32" data-name="Ellipse 2" src="assets/images/Ellipse_2.png" alt="Ellipse 2" class="q32">
-      </div>
-      <div class="outer_q33">
-        <div id="q33" data-name="Bienvenido a mi página" class="q33">
-                  <div key="0">Bienvenido a mi página</div>
-        </div>
-      </div>
-      <div class="outer_q34">
-        <div id="q34" data-name="flat-color-icons:next" class="q34">
-                <div class="outer_q35">
-                  <button class="boton">
-                    <img id="q35" data-name="Vector" src="assets/images/Vector.png" alt="Vector" class="q35">
-                  </button>
-                </div>
-        </div>
-      </div>
     </main>
-  </body>
+</body>
 </html>
