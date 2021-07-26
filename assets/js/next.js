@@ -20,38 +20,38 @@ function next(){
     let page = window.location.hash;
     if(page == ""){
         //INDEX -> ACERCA
-        document.getElementById("info").innerHTML = '<div class="col-4"><img class="img-fluid imagen" src="./assets/images/yo.png"></div><div class="col-4"><h1 class="texto-bienvenida">Mi nombre es Gonzalo</h1></div>';
-        animateCSS('.my-element', 'bounce').then((message) => {
+        animateCSS('.inicio', 'fadeOutLeft').then((message) => {
             // Do something after the animation
-            animateCSS('.my-element', 'bounce');
+            document.getElementById("info").innerHTML = '<div class="row justify-content-around acerca"><div class="col-4"><img class="img-fluid imagen" src="./assets/images/yo.png"></div><div class="col-4"><h1 class="texto-bienvenida">Mi nombre es Gonzalo</h1></div></div><div class="row justify-content-between"><div class="col-4 mx-auto boton"><span class="iconify" data-icon="mdi:arrow-right-bold-outline" data-width="50px" onclick="next();"></span></div></div>';
+            animateCSS('.acerca', 'fadeInRight');
           });
-        window.location.href="/index.html#1";
+        window.location.href="#1";
     }else if(page=="#1"){
         //ACERCA -> PORTAFOLIO
-        document.getElementById("info").innerHTML = '<div class="col-4"><img class="img-fluid imagen" src="./assets/images/logo.png"></div><div class="col-4"><h1 class="texto-bienvenida">PORTAFOLIO</h1></div>';
-        animateCSS('.my-element', 'bounce').then((message) => {
+        animateCSS('.acerca', 'fadeOutLeft').then((message) => {
             // Do something after the animation
-            animateCSS('.my-element', 'bounce');
+            document.getElementById("info").innerHTML = '<div class="row justify-content-around portafolio"><div class="col-4"><img class="img-fluid imagen" src="./assets/images/logo.png"></div><div class="col-4"><h1 class="texto-bienvenida">Mi Portafolio</h1></div></div><div class="row justify-content-between"><div class="col-4 mx-auto boton"><span class="iconify" data-icon="mdi:arrow-right-bold-outline" data-width="50px" onclick="next();"></span></div></div>';
+            animateCSS('.portafolio', 'fadeInRight');
           });
-        window.location.href="/index.html#2";
+        window.location.href="#2";
     }else if(page=="#2"){
         //PORTAFOLIO -> CONTACTO
-        document.getElementById("info").innerHTML = '<div class="col-4"><h1 class="texto-bienvenida">CONTACTAME</h1></div>';
-        animateCSS('.my-element', 'bounce').then((message) => {
+        animateCSS('.portafolio', 'fadeOutLeft').then((message) => {
             // Do something after the animation
-            animateCSS('.my-element', 'bounce');
+            document.getElementById("info").innerHTML = '<div class="row justify-content-around contacto"><h1>CONTACTAME</h1><div class="row justify-content-between"><div class="col-4 mx-auto boton"><span class="iconify" data-icon="mdi:arrow-right-bold-outline" data-width="50px" onclick="next();"></span></div></div>';
+            animateCSS('.contacto', 'fadeInRight');
           });
-        window.location.href="/index.html#3";
+        window.location.href="#3";
     }else if(page=="#3"){
         //CONTACTO -> INDEX
-        document.getElementById("info").innerHTML = '<div class="col-4"><img class="img-fluid imagen" src="./assets/images/imagen_1.png"></div><div class="col-4"><h1 class="texto-bienvenida">Bienvenido a mi pagina!</h1></div>';
-        animateCSS('.my-element', 'bounce').then((message) => {
+        animateCSS('.contacto', 'fadeOutLeft').then((message) => {
             // Do something after the animation
-            animateCSS('.my-element', 'bounce');
+            document.getElementById("info").innerHTML = '<div class="row justify-content-around inicio"><div class="col-4"><img class="img-fluid imagen" src="./assets/images/imagen_1.png"></div><div class="col-4"><h1 class="texto-bienvenida">Bienvenido a mi pagina!</h1></div></div><div class="row justify-content-between"><div class="col-4 mx-auto boton"><span class="iconify" data-icon="mdi:arrow-right-bold-outline" data-width="50px" onclick="next();"></span></div></div>';
+            animateCSS('.inicio', 'fadeInRight');
           });
-        window.location.href="/index.html#";
+        window.location.href="#";
     }else{
-        window.location.href="/index.html";
+        window.location.href="#";
         //ALL -> INDEX
     }
 }
