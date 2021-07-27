@@ -38,7 +38,7 @@ function next(){
         //PORTAFOLIO -> CONTACTO
         animateCSS('.portafolio', 'fadeOutLeft').then((message) => {
             // Do something after the animation
-            document.getElementById("info").innerHTML = '<div class="row justify-content-around contacto"><h1>CONTACTAME</h1><div class="row justify-content-between"><div class="col-4 mx-auto boton"><span class="iconify" data-icon="mdi:arrow-right-bold-outline" data-width="50px" onclick="next();"></span></div></div>';
+            document.getElementById("info").innerHTML = '<div class="row justify-content-around contacto"><div class="col-4"><h1 class="texto-bienvenida">CONTACTAME</h1></div><div class="col-4"><form><div class="mb-3"><label for="exampleInputEmail1" class="form-label">Correo electrónico</label><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"><div id="emailHelp" class="form-text">Tu correo está seguro</div></div><div class="mb-3"><label for="exampleInputPassword1" class="form-label">Mensaje</label><input type="text" class="form-control" id="exampleInputPassword1"></div><div class="mb-3 form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"><label class="form-check-label" for="exampleCheck1">Estás seguro?</label></div><button type="submit" class="btn btn-primary">Submit</button></form></div></div><div class="row justify-content-between"><div class="col-4 mx-auto boton"><span class="iconify" data-icon="mdi:arrow-right-bold-outline" data-width="50px" onclick="next();"></span></div></div>';
             animateCSS('.contacto', 'fadeInRight');
           });
         window.location.href="#3";
