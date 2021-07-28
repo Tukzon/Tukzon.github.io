@@ -26,22 +26,22 @@
                 <span class="navbar-toggler-icon iconify" data-icon="gg:menu"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto sombra-nav">
+                <ul class="navbar-nav mx-auto sombra-nav nav-fix">
                   <li class="nav-item">
-                    <a class="nav-link text-center ajuste-nav" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link text-center ajuste-nav" aria-current="page" href="#" onclick="menu('inicio')";>Inicio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-center ajuste-nav" onclick="next();" href="#1">Acerca</a>
+                    <a class="nav-link text-center ajuste-nav" href="#1" onclick="menu('acerca')";>Acerca</a>
                   </li>
-                  <a class="navbar-brand" href="#"><img class="img-fluid logo-nav text-center" src="./assets/images/logo.png"></a>
+                  <a class="navbar-brand" href="#" onclick="menu('inicio')";><img class="img-fluid logo-nav text-center" src="./assets/images/logo.png"></a>
                   <li class="nav-item">
-                    <a class="nav-link text-center ajuste-nav" href="#2">Portafolio</a>
+                    <a class="nav-link text-center ajuste-nav" href="#2" onclick="menu('portafolio')";>Portafolio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-center ajuste-nav" href="#3">Contacto</a>
+                    <a class="nav-link text-center ajuste-nav" href="#3" onclick="menu('contacto')";>Contacto</a>
                   </li>
                 </ul>
-                <ul class="navbar-nav" id="social">
+                <ul class="navbar-nav ms-auto" id="social">
                     <li class="nav-item>">
                         <a class="nav-link text-center" href="https://www.linkedin.com/in/gonzalo-salazar-mu%C3%B1oz/"><span class="iconify" data-icon="mdi:linkedin" data-width="30px"></span></a>
                     </li>
@@ -64,7 +64,7 @@
                 <h1 class="texto-bienvenida">Bienvenido a mi pagina!</h1>
               </div>
             </div>
-            <div class="row justify-content-between">
+            <div class="row justify-content-between boton-site">
               <div class="col-4 mx-auto boton">
                 <span class="iconify" data-icon="mdi:arrow-right-bold-outline" data-width="50px" onclick="next();"></span>
               </div>

@@ -16,13 +16,28 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
     node.addEventListener('animationend', handleAnimationEnd, {once: true});
   });
 
+function menu(pagina){
+  if(pagina == 'inicio'){
+    document.getElementById("info").innerHTML = '<div class="row justify-content-around inicio"><div class="col-4"><img class="img-fluid imagen" src="./assets/images/imagen_1.png"></div><div class="col-4"><h1 class="texto-bienvenida">Bienvenido a mi pagina!</h1></div></div><div class="row justify-content-between boton-site"><div class="col-4 mx-auto boton"><span class="iconify" data-icon="mdi:arrow-right-bold-outline" data-width="50px" onclick="next();"></span></div></div>';
+  }else if(pagina == 'acerca'){
+    document.getElementById("info").innerHTML = '<div class="row justify-content-around acerca"><div class="col-4"><img class="img-fluid imagen" src="./assets/images/yo.png"></div><div class="col-4"><h1 class="texto-bienvenida">Mi nombre es Gonzalo</h1></div></div><div class="row justify-content-between boton-site"><div class="col-4 mx-auto boton"><span class="iconify" data-icon="mdi:arrow-right-bold-outline" data-width="50px" onclick="next();"></span></div></div>';
+  }else if(pagina == 'portafolio'){
+    document.getElementById("info").innerHTML = '<div class="row justify-content-around portafolio"><div class="col-4"><img class="img-fluid imagen" src="./assets/images/imagen_1.png"></div><div class="col-4"><h1 class="texto-bienvenida">Mi Portafolio</h1></div></div><div class="row justify-content-between boton-site"><div class="col-4 mx-auto boton"><span class="iconify" data-icon="mdi:arrow-right-bold-outline" data-width="50px" onclick="next();"></span></div></div>';
+  }else if (pagina == 'contacto'){
+    document.getElementById("info").innerHTML = '<div class="row justify-content-around contacto"><div class="col-4"><h1 class="texto-bienvenida">CONTACTAME</h1></div><div class="col-4"><form><div class="mb-3"><label for="exampleInputEmail1" class="form-label">Correo electrónico</label><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></div><div class="mb-3"><label for="exampleInputPassword1" class="form-label">Mensaje</label><input type="text" class="form-control" id="exampleInputPassword1"></div><div class="mb-3 form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"><label class="form-check-label" for="exampleCheck1">Estás seguro?</label></div><button type="submit" class="btn btn-primary">Enviar</button></form></div></div><div class="row justify-content-between boton-site"><div class="col-4 mx-auto boton"><span class="iconify" data-icon="mdi:arrow-right-bold-outline" data-width="50px" onclick="next();"></span></div></div>';
+  }else{
+    window.location.href="#";
+    menu('inicio');
+  }
+};
+
 function next(){
     let page = window.location.hash;
     if(page == ""){
         //INDEX -> ACERCA
         animateCSS('.inicio', 'fadeOutLeft').then((message) => {
             // Do something after the animation
-            document.getElementById("info").innerHTML = '<div class="row justify-content-around acerca"><div class="col-4"><img class="img-fluid imagen" src="./assets/images/yo.png"></div><div class="col-4"><h1 class="texto-bienvenida">Mi nombre es Gonzalo</h1></div></div><div class="row justify-content-between"><div class="col-4 mx-auto boton"><span class="iconify" data-icon="mdi:arrow-right-bold-outline" data-width="50px" onclick="next();"></span></div></div>';
+            menu('acerca');
             animateCSS('.acerca', 'fadeInRight');
           });
         window.location.href="#1";
@@ -30,7 +45,7 @@ function next(){
         //ACERCA -> PORTAFOLIO
         animateCSS('.acerca', 'fadeOutLeft').then((message) => {
             // Do something after the animation
-            document.getElementById("info").innerHTML = '<div class="row justify-content-around portafolio"><div class="col-4"><img class="img-fluid imagen" src="./assets/images/logo.png"></div><div class="col-4"><h1 class="texto-bienvenida">Mi Portafolio</h1></div></div><div class="row justify-content-between"><div class="col-4 mx-auto boton"><span class="iconify" data-icon="mdi:arrow-right-bold-outline" data-width="50px" onclick="next();"></span></div></div>';
+            menu('portafolio');
             animateCSS('.portafolio', 'fadeInRight');
           });
         window.location.href="#2";
@@ -38,7 +53,7 @@ function next(){
         //PORTAFOLIO -> CONTACTO
         animateCSS('.portafolio', 'fadeOutLeft').then((message) => {
             // Do something after the animation
-            document.getElementById("info").innerHTML = '<div class="row justify-content-around contacto"><div class="col-4"><h1 class="texto-bienvenida">CONTACTAME</h1></div><div class="col-4"><form><div class="mb-3"><label for="exampleInputEmail1" class="form-label">Correo electrónico</label><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"><div id="emailHelp" class="form-text">Tu correo está seguro</div></div><div class="mb-3"><label for="exampleInputPassword1" class="form-label">Mensaje</label><input type="text" class="form-control" id="exampleInputPassword1"></div><div class="mb-3 form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"><label class="form-check-label" for="exampleCheck1">Estás seguro?</label></div><button type="submit" class="btn btn-primary">Submit</button></form></div></div><div class="row justify-content-between"><div class="col-4 mx-auto boton"><span class="iconify" data-icon="mdi:arrow-right-bold-outline" data-width="50px" onclick="next();"></span></div></div>';
+            menu('contacto');
             animateCSS('.contacto', 'fadeInRight');
           });
         window.location.href="#3";
@@ -46,12 +61,13 @@ function next(){
         //CONTACTO -> INDEX
         animateCSS('.contacto', 'fadeOutLeft').then((message) => {
             // Do something after the animation
-            document.getElementById("info").innerHTML = '<div class="row justify-content-around inicio"><div class="col-4"><img class="img-fluid imagen" src="./assets/images/imagen_1.png"></div><div class="col-4"><h1 class="texto-bienvenida">Bienvenido a mi pagina!</h1></div></div><div class="row justify-content-between"><div class="col-4 mx-auto boton"><span class="iconify" data-icon="mdi:arrow-right-bold-outline" data-width="50px" onclick="next();"></span></div></div>';
+            menu('inicio');
             animateCSS('.inicio', 'fadeInRight');
           });
         window.location.href="#";
     }else{
         window.location.href="#";
+        menu('inicio');
         //ALL -> INDEX
     }
-}
+};

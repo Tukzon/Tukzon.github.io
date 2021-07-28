@@ -23,12 +23,18 @@ main{
     max-width: auto;
 }
 .sombra-nav{
-    margin-top: -10px;
+    margin-top: 10px;
     max-height: 80px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 0px 0px 20px 20px;
     background-color:rgba(0, 0, 0, 0.15000000596046448);
+}
+.nav-fix{
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%,0%);
+    transform: translate(-50%,0%);
 }
 .imagen{
     float: left;
@@ -59,13 +65,26 @@ main{
     top: 200px;
     background: radial-gradient(50% 50% at 50% 50%, rgba(67, 141, 32, 0.4) 0%, rgba(20, 123, 49, 0.36875) 0.01%, rgba(36, 53, 41, 0) 100%);
 }
+.boton-site{
+    bottom: 0px;
+    position: relative;
+}
 .boton{
     color: #138E36;
     filter: drop-shadow(10px 15px 4px rgba(0, 0, 0, 0.4));
+    bottom: 0px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%,100%);
+    transform: translate(-50%,100%);
 }
 .contenido{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+
 }
 .ajuste-nav{
     padding-top: 25px;
@@ -75,4 +94,7 @@ main{
     color: #138E36;
     outline: none;
     border: none;
+}
+.info{
+    position: absolute;
 }
