@@ -42,12 +42,14 @@ main{
     border-radius: 20px 20px 20px 20px;
 }
 .texto-bienvenida{
-    padding-top: 80px;
     text-align: center;
     font-weight: bold;
     font-style: normal;
     line-height: 40px;
     font-size: 40px;
+}
+.text-fix{
+    padding-top: 80px;
 }
 #circle-left-top{
     position: absolute;
@@ -97,4 +99,5 @@ main{
 }
 .info{
     position: absolute;
+    min-height: 284px;
 }
